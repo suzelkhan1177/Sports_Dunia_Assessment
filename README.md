@@ -2,7 +2,7 @@
 
 ## Overview
 
-This application is a Vendor Management System that provides functionalities to manage vendors, purchase orders, and historical performance data. It is built using Node.js and Express.js.
+This application is a Vendor Management System that provides functionalities to manage vendors, purchase orders, and historical performance data. It is built using Node.js and Express.js And MySql.
 
 ## Features
 
@@ -12,18 +12,13 @@ This application is a Vendor Management System that provides functionalities to 
 
 ## Installation
 
-### Prerequisites
-
-- Node.js (>=14.x)
-- npm (Node Package Manager)
-
 ### Steps
 
 1. **Clone the Repository**
 
     ```bash
-    git clone <repository-url>
-    cd <repository-folder>
+    git clone https://github.com/suzelkhan1177/Sports_Dunia_Assessment.git
+    cd Sports_Dunia_Assessment
     ```
 
 2. **Install Dependencies**
@@ -39,6 +34,10 @@ This application is a Vendor Management System that provides functionalities to 
     ```
 
     By default, the application will start on `http://localhost:3000`.
+   <div> 
+   <img src="https://github.com/user-attachments/assets/a074b201-7ecf-4342-a7ee-30fed3fe4dc8" width="600" height="300px">
+  </div>
+
 
 ## API Endpoints
 
@@ -47,7 +46,12 @@ This application is a Vendor Management System that provides functionalities to 
 - **Create a Vendor**
   - `POST /api/vendors`
   - Request Body: JSON with vendor details
-  - Example: `{ "name": "Vendor Name", "contactDetails": "Contact Info", "address": "Vendor Address", "onTimeDeliveryRate": 95.5, "qualityRatingAvg": 4.7, "averageResponseTime": 2.5, "fulfillmentRate": 98 }`
+  - Example: `{ "name": "Vendor Name", "contactDetails": "Contact Info", "address": "Vendor Address", "onTimeDeliveryRate": 95.5, "qualityRatingAvg": 4.7, "averageResponseTime": 2.5, "fulfillmentRate": 9.8 }`
+  <br/>
+  <div> 
+   <img src="https://github.com/user-attachments/assets/6080eb7e-a28f-4110-b7c6-98d9bb4b1654" width="350" height="450px">
+  </div>
+
 
 - **List Vendors**
   - `GET /api/vendors`
@@ -71,6 +75,11 @@ This application is a Vendor Management System that provides functionalities to 
   - `POST /api/purchase-orders`
   - Request Body: JSON with purchase order details
   - Example: `{ "vendorId": 1, "orderDate": "2024-08-20", "deliveryDate": "2024-09-01", "items": "Item A, Item B", "quantity": 100, "status": "pending", "qualityRating": 4.5, "issueDate": "2024-08-20", "acknowledgmentDate": "2024-08-21" }`
+  <br/>
+  <div> 
+   <img src="https://github.com/user-attachments/assets/07f371c2-b699-462f-9b60-67fafd652781" width="400" height="550px">
+  </div>
+
 
 - **List Purchase Orders**
   - `GET /api/purchase-orders`
@@ -95,6 +104,12 @@ This application is a Vendor Management System that provides functionalities to 
   - Request Body: JSON with historical performance data
   - Example: `{ "vendorId": 1, "date": "2024-08-20", "onTimeDeliveryRate": 95.5, "qualityRatingAvg": 4.7, "averageResponseTime": 2.5, "fulfillmentRate": 98 }`
 
+  <br/>
+  <div> 
+   <img src="https://github.com/user-attachments/assets/1a927b2b-1bd0-41be-b7df-e5f927b04787" width="350" height="450px">
+  </div>
+  
+
 - **Get Historical Performance by Vendor ID**
   - `GET /api/historical_performance/vendor/:vendorId`
   - Path Parameter: `vendorId` (integer)
@@ -107,16 +122,19 @@ This application is a Vendor Management System that provides functionalities to 
 - **Delete Historical Performance Data**
   - `DELETE /api/historical_performance/:performanceId`
   - Path Parameter: `performanceId` (integer)
+ 
+   ### Environment Variables
+
+    - **Purpose:** Environment variables are used to store sensitive information securely and can be configured in a `.env` file or through your deployment environment.
+
+    - **Example:**
+   <div> 
+   <img src="https://github.com/user-attachments/assets/8b1f1af0-1e33-4542-9597-4651591964c3" width="400" height="200px">
+  </div>
 
 ## Error Handling
 
 Errors are handled by middleware and logged using a logging configuration. If an error occurs, a JSON response with status `500` and an error message is returned.
 
-## Contributing
 
-Feel free to fork the repository and submit pull requests. For significant changes or improvements, please open an issue first to discuss your proposed changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
